@@ -6,8 +6,6 @@ from selenium.webdriver.chrome.options import Options
 
 from utils import attach
 
-from selene import Browser, Config  # для кастомного браузера
-
 
 @pytest.fixture(scope='function', autouse=True)
 def browser_management():
@@ -28,14 +26,14 @@ def browser_management():
         command_executor="https://user1:1234@selenoid.autotests.cloud/wd/hub",
         options=options)
 
-    browser = Browser(Config(driver))  # кастомный браузер
+    browser.config.driver = driver
 
-    browser.base_url = 'https://demoqa.com'
-    browser.browser_name = 'chrome'
-    browser.hold_browser_open = False
-    browser.timeout = 20
-    browser.window_width = 1920
-    browser.window_height = 1200
+    browser.config.base_url = 'https://demoqa.com'
+    browser.config.browser_name = 'chrome'
+    browser.config.hold_browser_open = False
+    browser.config.timeout = 20
+    browser.config.window_width = 1920
+    browser.config.window_height = 1200
 
     yield
 
