@@ -145,18 +145,41 @@ def test_register_a_student(browser_management):
     )
 
 
-
 @allure.title('Login a student')
-def test_login_a_student():
-    assert False
+def test_login_a_student(browser_management):
+
+    # GIVEN:
+    with allure.step('Открыть форму регистрации'):
+        (
+            app.form
+            .open()
+        )
+
+    # THEN:
+    result = 5
+    assert result == 6, 'Result != 5!'
 
 
 @allure.title('Search a book')
-def test_login_a_student():
-    assert False
+def test_search_a_book(browser_management):
+
+    # GIVEN:
+    with allure.step('Открыть форму регистрации'):
+        (
+            app.form
+            .open()
+        )
+
+    # THEN:
+    result = 10
+    assert result == 6, 'Result != 10!'
 
 
 @pytest.mark.skip
 @allure.title('Register a book')
-def test_login_a_student():
+def test_search_a_book(browser_management):
+    pass
+
+@allure.title('I dont know the title :/')
+def test_(browser_management):
     pass
