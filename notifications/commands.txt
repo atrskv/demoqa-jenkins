@@ -1,0 +1,21 @@
+
+
+
+XXXXXXXXXAAHaC8FEa6ahevW26ato02rWpmz1ooyoZEI
+
+chat id -1001855512356
+
+
+
+java \
+"-DconfigFile=${notifications/config.json}" \
+-jar allure-notifications-4.2.1.jar
+
+
+java "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.2.1.jar
+
+
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-1001855512356", "text": "Hello world", "disable_notification": true}' \
+     https://api.telegram.org/botXXXXXXXX:AAHaC8FEa6ahevW26ato02rWpmz1ooyoZEI/sendMessage

@@ -4,6 +4,8 @@ from demoqa_tests.data import User, Gender, States, Cities, Subjects, Hobbies
 from demoqa_tests.model import app
 from utils.utils import delete_interrupt_elements
 
+import pytest
+
 
 student = User()
 
@@ -141,3 +143,20 @@ def test_register_a_student(browser_management):
             f'State and City {States.NCR.name} {Cities.Noida.name}'
         )
     )
+
+
+
+@allure.title('Login a student')
+def test_login_a_student():
+    assert False
+
+
+@allure.title('Search a book')
+def test_login_a_student():
+    assert False
+
+
+@pytest.mark.skip
+@allure.title('Register a book')
+def test_login_a_student():
+    pass

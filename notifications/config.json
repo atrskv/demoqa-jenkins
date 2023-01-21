@@ -1,0 +1,17 @@
+{
+  "base": {
+    "logo": "",
+    "project": "CLINICA",
+    "environment": "QA",
+    "comment": "BCDDISQA-12",
+    "reportLink": "https://jenkins.autotests.cloud/job/001-torsukov-jenkins_unit09/32/",
+    "language": "ru",
+    "allureFolder": "allure-report",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "XXXX99983:AAHaC8FEa6ahevW26ato02rWpmz1ooyoZEI",
+    "chat": "-1001855512356",
+    "replyTo": ""
+  }
+}
