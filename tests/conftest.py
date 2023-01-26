@@ -30,7 +30,7 @@ def browser_management(request):
 
     options = Options()
     selenoid_capabilities = {
-        "browserName": "chrome",
+        "browserName": "safari",
         "browserVersion": browser_version,
         "selenoid:options": {
             "enableVNC": True,
@@ -44,17 +44,17 @@ def browser_management(request):
     password = os.getenv('PASSWORD')
 
     driver = webdriver.Remote(
-        command_executor=f"https://{login}:{password}@selenoid.autotests.cloud/wd/hub",
+        command_executor=f"http://95.163.237.174:8080/wd/hub",
         options=options)
 
     browser.config.driver = driver
 
     browser.config.base_url = 'https://demoqa.com'
-    browser.config.browser_name = 'chrome'
-    browser.config.hold_browser_open = False
-    browser.config.timeout = 20
-    browser.config.window_width = 1920
-    browser.config.window_height = 1200
+    # browser.config.browser_name = 'chrome'
+    # browser.config.hold_browser_open = False
+    # browser.config.timeout = 20
+    # browser.config.window_width = 1920
+    # browser.config.window_height = 1200
 
     yield
 
